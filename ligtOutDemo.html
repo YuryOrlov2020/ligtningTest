@@ -7,12 +7,13 @@
 </style>
 <script src="https://petrolpluscardsasia--dev06.sandbox.my.site.com/lightning/lightning.out.js"></script>
 
+<div data-lightning-out = "true"></div>
 
 <script>
     const appName = "c:LigtningOutTest";
     const componentName = "c:testLigthingOut";
     const lightningEndpoint = "https://petrolpluscardsasia--dev06.lightning.force.com";
-    //const targetElement = document.querySelector("[data-lightning-out]");
+    const targetElement = document.querySelector("[data-lightning-out]");
     const componentAttributes = {
 
 
@@ -23,7 +24,8 @@
       function (){
           $Lightning.createComponent(
               componentName,
-              componentAttributes
+              componentAttributes,
+              targetElement
           );
       }, lightningEndpoint
     );
